@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Roundest Pokémon - Which Pokémon is most round?
+
+Answering all of life's toughest questions
 
 ## Getting Started
 
@@ -32,3 +34,10 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## TODO
+
+- [ ] Use next/image to handle image caching and better rendering
+  - [ ] Move images to bulbapedia
+- [ ] Persist data fetched from Pokemon API
+- [ ] Create the results page with counting/sorting
