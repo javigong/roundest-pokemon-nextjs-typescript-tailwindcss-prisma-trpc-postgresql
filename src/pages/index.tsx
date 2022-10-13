@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { getOptionsForVote } from "@/utils/getRandomPokemon";
 import { trpc } from "@/utils/trpc";
+import Image from "next/image";
 import type React from "react";
 import { useState } from "react";
 import { inferQueryResponse } from "./api/trpc/[trpc]";
@@ -64,8 +65,10 @@ const PokemonListing: React.FC<{
 }> = (props) => {
   return (
     <div className="flex flex-col items-center">
-      <img
-        src={props.pokemon.sprites.front_default ?? undefined}
+      <Image
+        src={props.pokemon.sprites.front_default ?? "" }
+        width={256}
+        height={256}
         className="w-64 h-64"
         alt="first pokemon"
       />
