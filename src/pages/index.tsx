@@ -29,7 +29,7 @@ const Home = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex flex-col justify-center items-center">
+    <div className="h-screen w-screen flex flex-col justify-center items-center pb-2">
       <div className="text-2xl text-center">Which Pokémon is roundest?</div>
       <div className="p-2" />
       {!firstPokemon.isLoading &&
@@ -48,6 +48,9 @@ const Home = () => {
                 vote={() => voteForRoundest(second)}
               />
               <div className="p-2" />
+            </div>
+            <div className="absolute bottom-0 w-full text-center">
+              <a href="https://github.com/javigong/roundest-pokemon-nextjs-typescript-tailwindcss-prisma-trpc-postgresql">Javier Gongora © 2022</a>
             </div>
           </>
         )}
