@@ -10,7 +10,7 @@ Deployed with Vercel:
 
 Prerequisite:
 
-- Two PostgreSQL databases using Heroku
+- Two PostgreSQL/MySQL local databases or connection to Heroku/Planetscale/etc database hosting service
 - npm
 
 Setup
