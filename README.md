@@ -16,8 +16,8 @@ Prerequisite:
 Setup
 
 1. Clone repo
-2. npm install
-3. Create .env file if one does not already exist
+2. `npm install`
+3. Create `.env` file if one does not already exist
 4. Add connection URLs for both database and shadow db to .env
 5. Initialize database - `npx prisma migrate dev`
 6. Initialize base data set - `npm run ts-node ./scripts/fill-db.ts`
