@@ -44,4 +44,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [X] Use next/image to handle image caching and better rendering
 - [X] Persist data fetched from Pokemon API
 - [X] Create the results page with counting/sorting
-- [ ] Better loading states between votes
+- [X] Better loading states between votes
