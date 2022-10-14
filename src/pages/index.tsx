@@ -2,6 +2,7 @@
 import { getOptionsForVote } from "@/utils/getRandomPokemon";
 import { trpc } from "@/utils/trpc";
 import Image from "next/image";
+import Link from "next/link";
 import type React from "react";
 import { useState } from "react";
 import { inferQueryResponse } from "./api/trpc/[trpc]";
@@ -50,7 +51,11 @@ const Home = () => {
               <div className="p-2" />
             </div>
             <div className="absolute bottom-0 w-full text-center">
-              <a href="https://github.com/javigong/roundest-pokemon-nextjs-typescript-tailwindcss-prisma-trpc-postgresql">Javier Gongora © 2022</a>
+              <Link href="/results">Results</Link>
+              {" | "}
+              <a href="https://github.com/javigong/roundest-pokemon-nextjs-typescript-tailwindcss-prisma-trpc-postgresql">
+                Javier GitHub
+              </a>
             </div>
           </>
         )}
@@ -69,7 +74,7 @@ const PokemonListing: React.FC<{
   return (
     <div className="flex flex-col items-center">
       <Image
-        src={props.pokemon.spriteUrl }
+        src={props.pokemon.spriteUrl}
         width={256}
         height={256}
         className="w-64 h-64"
