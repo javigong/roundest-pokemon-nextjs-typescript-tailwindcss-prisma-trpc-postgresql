@@ -16,3 +16,9 @@ CREATE TABLE "Pokemon" (
 
     CONSTRAINT "Pokemon_pkey" PRIMARY KEY ("id")
 );
+
+-- CreateIndex
+CREATE INDEX "Vote_votedForId_idx" ON "Vote"("votedForId");
+
+-- CreateIndex
+CREATE INDEX "Vote_votedAgainstId_idx" ON "Vote"("votedAgainstId");

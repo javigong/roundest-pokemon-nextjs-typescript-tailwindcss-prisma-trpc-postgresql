@@ -29,7 +29,7 @@ export const appRouter = trpc
           ...input,
         },
       });
-      return { success: true };
+      return { success: true, vote: voteInDb };
     },
   });
 
