@@ -1,6 +1,10 @@
 # Roundest Pokémon - Which Pokémon is most round?
 
-Answering all of life's toughest questions
+Answering all of life's toughest questions.
+
+Deployed with Vercel: 
+
+- http://roundest-pokemon-nextjs-typescript-tailwindcss-prisma-javigong.vercel.app/
 
 ## Getting Started
 
