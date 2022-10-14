@@ -29,36 +29,41 @@ const Home = () => {
     updateIds(getOptionsForVote());
   };
 
+  const dataLoaded =
+    !firstPokemon.isLoading &&
+    firstPokemon.data &&
+    !secondPokemon.isLoading &&
+    secondPokemon.data;
+
   return (
-    <div className="h-screen w-screen flex flex-col justify-center items-center pb-2">
-      <div className="text-2xl text-center">Which Pokémon is roundest?</div>
-      <div className="p-2" />
-      {!firstPokemon.isLoading &&
-        firstPokemon.data &&
-        !secondPokemon.isLoading &&
-        secondPokemon.data && (
-          <>
-            <div className="border rounded p-8 flex justify-between items-center max-w-2xl">
-              <PokemonListing
-                pokemon={firstPokemon.data}
-                vote={() => voteForRoundest(first)}
-              />
-              <div className="p-8">Vs</div>
-              <PokemonListing
-                pokemon={secondPokemon.data}
-                vote={() => voteForRoundest(second)}
-              />
-              <div className="p-2" />
-            </div>
-            <div className="absolute bottom-0 w-full text-center">
-              <Link href="/results">Results</Link>
-              {" | "}
-              <a href="https://github.com/javigong/roundest-pokemon-nextjs-typescript-tailwindcss-prisma-trpc-postgresql">
-                Javier GitHub
-              </a>
-            </div>
-          </>
-        )}
+    <div className="h-screen w-screen flex flex-col justify-between items-center pb-2">
+      <div className="text-2xl text-center pt-8">
+        Which Pokémon is roundest?
+      </div>
+      {dataLoaded && (
+        <>
+          <div className="border rounded p-8 flex justify-between items-center max-w-2xl">
+            <PokemonListing
+              pokemon={firstPokemon.data}
+              vote={() => voteForRoundest(first)}
+            />
+            <div className="p-8">Vs</div>
+            <PokemonListing
+              pokemon={secondPokemon.data}
+              vote={() => voteForRoundest(second)}
+            />
+          </div>
+        </>
+      )}
+      {!dataLoaded && <img src="/rings.svg" alt="loading.." className="w-48" />}
+      <div className="w-full text-center pb-2">
+        <Link href="/results">Results</Link>
+        {" | "}
+        <a href="https://github.com/javigong/roundest-pokemon-nextjs-typescript-tailwindcss-prisma-trpc-postgresql">
+          Javier GitHub
+        </a>
+        <div className="p-2" />
+      </div>
     </div>
   );
 };
